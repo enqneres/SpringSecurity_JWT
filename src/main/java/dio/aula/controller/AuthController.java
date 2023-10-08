@@ -19,7 +19,6 @@ public class AuthController {
     public String sayAuthHello(){
         return "Endpoint necessita de autenticação";
     }
-
     @PostMapping("/login")
     public ResponseEntity<AuthToken> realizarLogin(@RequestBody Usuario u){
         if(u.getLogin().equals("enoque") && u.getSenha().equals("12345")){
